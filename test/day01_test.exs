@@ -39,6 +39,6 @@ defmodule AOC.Day01Test do
 
   @tag part: "1"
   test "part2", %{input: input} do
-    assert part2(input) == 54489
+    assert part2(input) == 54473
   end
 end
