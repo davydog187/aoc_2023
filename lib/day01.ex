@@ -39,9 +39,12 @@ defmodule AOC.Day01 do
   defp find_digits(line), do: find_digits(line, {nil, nil})
 
   defp find_digits("", {first, last}), do: 10 * first + last
+
   defp find_digits(line, {first, last}) do
     case next_digit(line) do
-      nil -> find_digits("", {first, last})
+      nil ->
+        find_digits("", {first, last})
+
       {digit, line} ->
         find_digits(line, {first || digit, digit})
     end

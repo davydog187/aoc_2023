@@ -8,11 +8,12 @@ defmodule AOCCase do
     end
   end
 
-  def load_files(%{day: day, part: part})do
-    path = Path.join([
-      :code.priv_dir(:aoc_2023),
-      "#{day}_#{part}.txt"
-    ])
+  def load_files(%{day: day, part: part}) do
+    path =
+      Path.join([
+        :code.priv_dir(:aoc_2023),
+        "#{day}_#{part}.txt"
+      ])
 
     %{input: File.read!(path)}
   end

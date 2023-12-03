@@ -1,6 +1,6 @@
 defmodule AOC.Day02 do
   def part1(input) do
-     input
+    input
     |> String.split("\n", trim: true)
     |> Enum.map(fn line ->
       line
@@ -10,7 +10,6 @@ defmodule AOC.Day02 do
     end)
     |> Enum.sum()
   end
-
 
   def part2(input) do
     input
@@ -31,8 +30,8 @@ defmodule AOC.Day02 do
   defp set_possibility(%{id: id, maxes: maxes}) do
     if maxes.red <= 12 and maxes.green <= 13 and maxes.blue <= 14 do
       id
-      else
-        0
+    else
+      0
     end
   end
 
@@ -54,13 +53,12 @@ defmodule AOC.Day02 do
       rest
       |> String.split("; ", trim: true)
       |> Enum.map(fn game ->
-        blocks =
-          game
-          |> String.split(", ", trim: true)
-          |> Enum.map(fn block ->
-            {blocks, " " <> color} = Integer.parse(block)
-            {String.to_atom(color), blocks}
-          end)
+        game
+        |> String.split(", ", trim: true)
+        |> Enum.map(fn block ->
+          {blocks, " " <> color} = Integer.parse(block)
+          {String.to_atom(color), blocks}
+        end)
       end)
 
     %{id: id, grabs: grabs}
