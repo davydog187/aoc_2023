@@ -26,7 +26,7 @@ defmodule AOC.Day02Test do
     Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
     """
 
-    assert part2(input) == 8
+    assert part2(input) == 2286
   end
 
   @tag part: "1"

@@ -24,6 +24,8 @@ defmodule Mix.Tasks.Gen.Day do
 
       import AOC.Day#{padded_num}
 
+      @moduletag day: "day#{padded_num}"
+
       test "example1" do
         input = ""
 
